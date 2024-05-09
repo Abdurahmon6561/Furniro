@@ -11,19 +11,21 @@ import NotFound from "./pages/NotFound";
 import Layout from "./pages/Layout";
 import LifeCycle from "./component/LifeCycle";
 import Shop from "./pages/Shop";
+import FetchUrl from "./component/FetchUrl";
 
 export default class App extends Component {
   render() {
     return (
       <div className="container">
         <BrowserRouter>
+          {/* <FetchUrl /> */}
+
           <Routes>
             <Route path="/" element={<Layout />}>
               <Route index element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/shop" element={<Shop />} />
-
               {/* <Route path="/life" element={<LifeCycle />} /> */}
               <Route path="*" element={<NotFound />} />
             </Route>
